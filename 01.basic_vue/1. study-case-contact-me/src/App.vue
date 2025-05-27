@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>App</h1>
-    <ContactMeFormVue :handleClickPlus="handleClickPlus"/>
+    <ContactMeFormVue :handleSubmitForm="handleSubmitForm"/>
     <ContactCardVue :form="form" />
   </div>
 </template>
@@ -10,10 +10,11 @@
 import { ref } from "vue";
 import ContactCardVue from "./components/ContactCard.vue";
 import ContactMeFormVue from "./components/ContactMeForm.vue";
+import SlotComponent from "./components/SlotComponent.vue";
 const data = [];
 const form = ref(data);
 
-function handleClickPlus(name, email){
+function handleSubmitForm(name, email){
   form.value.push({name, email});
 }
 </script>
