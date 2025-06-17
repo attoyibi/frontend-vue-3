@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      name: '',
+      component: () => import('../views/fetching/FetchMounted.vue'),
+    },
+    {
       path: '/fetch-mounted',
       name: 'fetch-mounted',
       component: () => import('../views/fetching/FetchMounted.vue'),
