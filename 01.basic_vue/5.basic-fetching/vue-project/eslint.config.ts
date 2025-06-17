@@ -6,7 +6,6 @@ import pluginVitest from '@vitest/eslint-plugin'
 import pluginCypress from 'eslint-plugin-cypress/flat'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
-// Pastikan semua config di-merge dengan benar dan tidak ada properti yang tidak didukung
 export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
@@ -23,17 +22,8 @@ export default defineConfigWithVueTs(
     ...pluginCypress.configs.recommended,
     files: [
       'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}',
-      'cypress/support/**/*.{js,ts,jsx,tsx}'
+      'cypress/support/**/*.{js,ts,jsx,tsx}',
     ],
   },
   skipFormatting,
-)
-)
-    ...pluginCypress.configs.recommended,
-  files: [
-    'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}',
-    'cypress/support/**/*.{js,ts,jsx,tsx}'
-  ],
-  },
-skipFormatting,
 )
