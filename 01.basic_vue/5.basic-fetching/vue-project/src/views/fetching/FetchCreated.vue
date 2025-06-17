@@ -1,6 +1,12 @@
 <template>
   <div>
     <h1>Daftar Pengguna</h1>
+    <p>
+      <a href="https://github.com/attoyibi/frontend-vue-3/blob/main/01.basic_vue/5.basic-fetching/vue-project/src/views/fetching/FetchCreated.vue" 
+       target="_blank">
+      Lihat kode sumber di GitHub
+      </a>
+    </p>
     <ul v-if="users.length">
       <li v-for="user in users" :key="user.id">
         {{ user.name }} ({{ user.email }})

@@ -1,6 +1,12 @@
 <template>
   <div class="user-profile">
     <h1>Fetch Setup</h1>
+    <p>
+      <a href="https://github.com/attoyibi/frontend-vue-3/blob/main/01.basic_vue/5.basic-fetching/vue-project/src/views/fetching/FetchSetup.vue" 
+        target="_blank">
+      Lihat kode sumber di GitHub
+      </a>
+    </p>
     <h2>Profil Pengguna</h2>
 
     <div v-if="isLoading" class="loading-state">

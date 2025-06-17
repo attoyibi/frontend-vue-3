@@ -1,6 +1,12 @@
 <template>
   <div class="product-detail-page">
     <h1>Fetch Vue Query</h1>
+    <p>
+      <a href="https://github.com/attoyibi/frontend-vue-3/blob/main/01.basic_vue/5.basic-fetching/vue-project/src/views/fetching/FetchVueQuery.vue" 
+        target="_blank">
+      Lihat kode sumber di GitHub
+      </a>
+    </p>
     <p>Halaman ini menampilkan detail produk berdasarkan ID yang diberikan di URL.</p>
     <div v-if="!productId" class="no-product-id">
           

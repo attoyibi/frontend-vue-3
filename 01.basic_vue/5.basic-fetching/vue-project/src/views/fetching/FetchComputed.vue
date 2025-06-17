@@ -1,7 +1,12 @@
 <template>
   <div class="shopping-cart">
     <h2>Keranjang Belanja</h2>
-
+<p>
+      <a href="https://github.com/attoyibi/frontend-vue-3/blob/main/01.basic_vue/5.basic-fetching/vue-project/src/views/fetching/FetchComputed.vue" 
+       target="_blank">
+      Lihat kode sumber di GitHub
+      </a>
+    </p>
     <div v-if="cartItems.length === 0" class="empty-cart">
       <p>Keranjang Anda kosong.</p>
       <button @click="addSampleItems">Tambahkan Beberapa Produk Contoh</button>
