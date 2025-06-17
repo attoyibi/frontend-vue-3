@@ -12,6 +12,26 @@
     }
   ],
   "compilerOptions": {
-    "module": "NodeNext"
-  }
+    "module": "NodeNext",
+    "moduleResolution": "node", // Pastikan ini ada
+    "esModuleInterop": true,   // Pastikan ini ada
+    "allowSyntheticDefaultImports": true, // Pastikan ini ada
+    "skipLibCheck": true, // Bisa membantu meredakan beberapa error terkait library
+    "types": ["node", "vue", "vite/client"], // Tambahkan 'vue' dan 'vite/client' jika menggunakan Vite. 'node' jika menggunakan Node.js environment
+    "lib": ["esnext", "dom", "dom.iterable"] // Pastikan 'dom' dan 'dom.iterable' ada untuk lingkungan browser
+  }, 
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.js", 
+    "src/shims-vue.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage"
+  ]
 }
