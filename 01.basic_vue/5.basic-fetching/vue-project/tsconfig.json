@@ -1,17 +1,17 @@
 {
   "files": [],
   "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.vitest.json" }
   ],
   "compilerOptions": {
-    "module": "NodeNext"
-  }
+    "module": "NodeNext",
+    "composite": true,
+    "types": ["vite/client"], // penting untuk support import .vue dan vite
+    "moduleResolution": "bundler", // penting agar resolve import seperti .vue
+    "allowSyntheticDefaultImports": true, // untuk import default Vue SFC
+    "esModuleInterop": true // untuk import plugin
+  },
+  "include": ["env.d.ts", "src/**/*.d.ts", "src/**/*.ts", "src/**/*.vue"]
 }
